@@ -37,15 +37,13 @@
           <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
         </v-list-item-avatar>
 
-        <v-list-item-content>
+        <v-list-item-content >
           <v-list-item-title class="title">Sandra Adams</v-list-item-title>
           <v-list-item-subtitle>sandra_a88@gmail.com</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
-      <v-divider></v-divider>
-
-      <v-list>
+       <v-list>
         <v-list-item>
           <v-list-item-icon>
             <v-icon dense></v-icon>
@@ -53,12 +51,13 @@
 
           <v-list-item-content>
             <v-list-item-title>
-              <v-btn color="green lighten--5">Register</v-btn>
+              <v-btn  small color="green"><v-icon dense>mdi-logout</v-icon>SignOut</v-btn>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
-      <!-- <v-btn>Sign up</v-btn> -->
+
+      <v-divider></v-divider>
     </v-navigation-drawer>
   </nav>
 </template>
@@ -68,7 +67,8 @@ export default {
   data() {
     return {
       drawer: true,
-      expandOnHover: true
+      expandOnHover: true,
+      
     };
   }
 };

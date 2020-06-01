@@ -11,14 +11,16 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-align-justify"></i>
+            </span>
           </button>
           <div class="collapse navbar-collapse" id="main_nav4">
             <ul class="navbar-nav">
-              <li class="nav-item" v-for="menu in menus" :key="menu.item">
+              <li class="nav-item d-none d-md-block" v-for="menu in menus" :key="menu.item">
                 <a class="nav-link" href="#">{{menu.item}}</a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown d-none d-md-block">
                 <a
                   class="nav-link dropdown-toggle"
                   href="http://example.com"
@@ -53,7 +55,6 @@
                   href="#"
                   class="nav-link dropdown-toggle font-weight-light"
                   data-toggle="dropdown"
-                  v-on="on"
                 >USD</a>
                 <ul class="dropdown-menu small border-0 shadow p-0 m-0">
                   <li class v-for="(item, index) in items" :key="index">
@@ -73,263 +74,74 @@
 
     <!-- ============================ COMPONENTS 1  ================================= -->
     <div class="row">
-      <div class="col-md-3">
-        <figure class="card card-product-grid">
+      <!-- <v-list> -->
+        <!-- <v-list-item> -->
+          <!-- <v-list-item-icon>
+            <v-icon dense></v-icon>
+          </v-list-item-icon> -->
+
+          <!-- <v-list-item-content>
+            <v-list-item-title>
+              <v-btn v-for="(link, index) in links" :key="index" router :to="link.route" small color="green"><v-icon dense>mdi-logout</v-icon>SignOut</v-btn>
+            </v-list-item-title>
+          </v-list-item-content> -->
+        <!-- </v-list-item> -->
+      <!-- </v-list> -->
+      
+      <div class="col-md-3" v-for="(card, index) in cards" :key="index">
+        <figure class="card card-product-grid" >
           <div class="img-wrap">
-            <img src="../assets/images/banners/tomatoes.jpg" />
-          </div>
-          <figcaption class="info-wrap border-top">
-            <a href="#" class="title">Tomatoes</a>
-            <div class="price mt-2">$30.00</div>
-            <!-- price-wrap.// -->
-          </figcaption>
-        </figure>
-        <!-- card // -->
-      </div>
-      <!-- col.// -->
-      <div class="col-md-3">
-        <figure class="card card-product-grid">
-          <div class="img-wrap">
-            <img src="../assets/images/banners/onion.jpg" />
-            <span class="topbar">
-              <a href="#" class="float-right">
-                <i class="fa fa-heart"></i>
-              </a>
-            </span>
-            <a class="btn-overlay" href="#">
+            <img v-bind:src="card.image" alt="show" />
+            <v-btn router :to="card.route" class="green btn-overlay rounded-0" href="#" >
               <i class="fa fa-search-plus"></i> Quick view
-            </a>
+            </v-btn>
           </div>
           <figcaption class="info-wrap border-top">
-            <a href="#" class="title">Onions</a>
-            <div class="price mt-2">$20.00</div>
-            <!-- price-wrap.// -->
-          </figcaption>
-        </figure>
-        <!-- card // -->
-      </div>
-      <!-- col.// -->
-      <div class="col-md-3">
-        <figure class="card card-product-grid">
-          <div class="img-wrap">
-            <span class="topbar">
-              <span class="badge badge-success">NEW</span>
-            </span>
-            <img src="../assets/images/banners/Raw-Chicken-2.jpg" />
-          </div>
-          <figcaption class="info-wrap border-top">
-            <a href="#" class="title">Chicken</a>
-            <div class="price-wrap mt-2">
-              <span class="price">$8.99</span>
-              <del class="price-old">$13.99</del>
-            </div>
-            <!-- price-wrap.// -->
-          </figcaption>
-        </figure>
-        <!-- card // -->
-      </div>
-      <!-- col.// -->
-      <div class="col-md-3">
-        <figure class="card card-product-grid">
-          <div class="img-wrap">
-            <img src="../assets/images/banners/thyme.jpg" />
-          </div>
-          <figcaption class="info-wrap border-top text-center">
-            <small class="text-uppercase font-weight-bolder text-warning">CONDIMENTS</small>
-            <p>
-              <a href="#" class="title">Thyme</a>
-            </p>
-          </figcaption>
-        </figure>
-        <!-- card // -->
-      </div>
-      <!-- col.// -->
-    </div>
-    <!-- ============================ COMPONENTS 1  END .// ================================= -->
-
-    <!-- ============================ COMPONENTS 2  ================================= -->
-    <div class="row">
-      <div class="col-md-3">
-        <a href="../assets/images/banners/mandarin-oranges.jpg" class="card card-product-grid">
-          <div class="img-wrap">
-            <img src="../assets/images/banners/mandarin-oranges.jpg" />
-          </div>
-          <figcaption class="info-wrap">
-            <p class="title text-truncate">Mandarin Oranges</p>
-            <div class="price mt-2">$6.00</div>
-            <!-- price-wrap.// -->
-          </figcaption>
-        </a>
-        <!-- card // -->
-      </div>
-      <!-- col.// -->
-
-      <div class="col-md-3">
-        <figure class="card card-product-grid">
-          <a href="#" class="img-wrap">
-            <img src="../assets/images/banners/salmon.jpg" />
-          </a>
-          <figcaption class="info-wrap">
-            <a href="#" class="title">Salmon</a>
-            <div class="mt-2">
-              <var class="price">$10.00</var>
-              <!-- price-wrap.// -->
-              <a
-                href="http://localhost/E-commerce/ecommerce-code-uikit/_HTML-Components/_shopping-cart.html"
-                class="btn btn-sm btn-outline-primary float-right"
-              >
-                Add to cart
-                <i class="fa fa-shopping-cart"></i>
-              </a>
-            </div>
-            <!-- action-wrap.end -->
-          </figcaption>
-        </figure>
-        <!-- card // -->
-      </div>
-      <!-- col.// -->
-
-      <div class="col-md-3">
-        <a href="#" class="card card-product-grid">
-          <div class="img-wrap">
-            <img src="../assets/images/banners/oha.jpg" />
-          </div>
-          <div class="info-wrap text-center">
-            <p class="title text-truncate">Oha</p>
-            <ul class="rating-stars">
-              <li style="width:80%" class="stars-active">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </li>
-              <li>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </li>
-            </ul>
-            <small class="text-muted">34</small>
-            <div class="price-wrap mt-2 text-center">
-              <span class="price">$9.95</span>
-            </div>
-            <!-- price-wrap.// -->
-          </div>
-        </a>
-        <!-- card // -->
-      </div>
-      <!-- col.// -->
-
-      <div class="col-md-3">
-        <figure class="card card-product-grid">
-          <a href="#" class="img-wrap">
-            <img src="../assets/images/banners/millet.jpg" />
-          </a>
-          <figcaption class="info-wrap">
-            <a href="#" class="title">Millet</a>
-            <div class="mt-2">
-              <var class="price">$12.95</var>
-              <ul class="rating-stars float-right">
-                <li style="width:80%" class="stars-active">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </li>
-                <li>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </li>
-              </ul>
-            </div>
-          </figcaption>
-        </figure>
-        <!-- card // -->
-      </div>
-      <!-- col.// -->
-    </div>
-    <!-- row.// -->
-    <!-- ============================ COMPONENTS 2  END .// ================================= -->
-
-    <br />
-
-    <!-- ============================ COMPONENTS 3  ================================= -->
-    <div class="row">
-      <div class="col-md-3">
-        <figure class="card card-product-grid card-lg">
-          <div class="img-wrap">
-            <img src="../assets/images/banners/ewedu.jpg" />
-          </div>
-          <figcaption class="info-wrap">
-            <a class="title">Ewedu</a>
-            <p class="text-muted">Cut</p>
-          </figcaption>
-          <div class="bottom-wrap">
-            <a href class=" float-right">Order Now</a>
-            <ul class="rating-stars">
-              <li style="width:80%" class="stars-active">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </li>
-              <li>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </li>
-            </ul>
-            <div class="price-wrap">
-              <span class="price">$19.00</span>
-            </div>
-            <!-- price-wrap.// -->
-          </div>
-          <!-- bottom-wrap.// -->
-        </figure>
-
-        
-      </div>
-      <!-- col.// -->
-      <div class="col-md-3">
-        <figure class="card card-product-grid card-lg">
-          <a href="#" class="img-wrap">
-            <img src="../assets/images/banners/ehuru.jpg" />
-          </a>
-          <figcaption class="info-wrap">
-            <p>
-              <a href="#" class="title">Ehuru</a>
-            </p>
-          </figcaption>
-          <div class="bottom-wrap d-flex align-items-center">
-            <div class="mr-3">
-              <span class="price h5">$12</span>
-            </div>
-            <!-- price.// -->
+            <h3 class="title">{{card.name}}</h3>
+            <div class="price mt-2">{{card.price}}</div>
             <a
-              href="http://localhost/E-commerce/ecommerce-code-uikit/_HTML-Components/Shopping%20cart.html"
-              class=""
-            >Add to cart
+              href="#"
+              class="btn btn-sm btn-danger text-white"
+            >
+              Add to cart
               <i class="fa fa-shopping-cart"></i>
             </a>
-          </div>
-          <!-- bottom-wrap.// -->
+            <!-- price-wrap.// -->
+          </figcaption>
         </figure>
+        <!-- card // -->
       </div>
-      <!-- col.// -->
+      
     </div>
     <!-- row.// -->
-  </div>
 
+    <!-- Button trigger modal -->
+<button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" v-for="(card, index) in cards" :key="index" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{card.name}}</h5>
+        <h6>{{card.price}}</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img height="100%" width="100%" :src="card.image" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">{{card.cartbtn}}<i class="ml-2 fa fa-shopping-cart"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
 </template>
 
 <script>
@@ -349,9 +161,44 @@ export default {
         { icon: "", item: "Grains" },
         { icon: "", item: "Vegetable" },
         { icon: "", item: "Oil" }
+      ],
+
+      // links: [
+      //   {route: '/About'}
+      // ],
+
+      cards: [
+        {image: require ('../assets/images/banners/tomatoes.jpg'), name: 'Tomatoes', price: '$30.00', cartbtn: 'Add to cart', route: '/firstItem'},
+        {image: require ('../assets/images/banners/onion.jpg'), name: 'Onions', price: '$20.00', cartbtn: 'Add to cart', route: '/secondItem'},
+        {image: require ('../assets/images/banners/Raw-Chicken-2.jpg'), name: 'Chicken', price: '$8.99', cartbtn: 'Add to cart', route: '/thirdItem'},
+        {image: require ('../assets/images/banners/thyme.jpg'), name: 'Thyme', price: '$3.00', cartbtn: 'Add to cart', route: '/fourthItem'},
+        {image: require ('../assets/images/banners/mandarin-oranges.jpg'), name: 'Mandarin Oranges', price: '$6.00', cartbtn: 'Add to cart', route: '/fifthItem'},
+        {image: require ('../assets/images/banners/salmon.jpg'), name: 'Salmon', price: '$10.00', cartbtn: 'Add to cart', route: '/sixthItem'},
+        {image: require ('../assets/images/banners/oha.jpg'), name: 'Oha', price: '$9.95', cartbtn: 'Add to cart', route: '/seventhItem'},
+        {image: require ('../assets/images/banners/millet.jpg'), name: 'Millet', price: '$12.95', cartbtn: 'Add to cart', route: '/eightItem'},
+        {image: require ('../assets/images/banners/ewedu.jpg'), name: 'Jute Mallow leaf', price: '$19.00', cartbtn: 'Add to cart', route: '/ninethItem'},
+        {image: require ('../assets/images/banners/ehuru.jpg'), name: 'Ehuru', price: '$12', cartbtn: 'Add to cart', route: '/tenthItem'}
       ]
     };
-  }
+  },
+
+  // methods: {
+  //   modalClick: function() {
+      
+  //       this.cards = this.cards.forEach(this.printArray);
+
+        
+      
+  // //      myFunction: function () {		
+	// // 	this.elmnIndex = this.item1.forEach(this.printArray);
+		
+  // //   },
+	// // printArray:function(item, index){
+	// //   this.$refs.myId.innerHTML = this.$refs.myId.innerHTML + "<p>Index["+index+"] = "+item+"</p>";
+  // //    }
+      
+  //   }
+  // }
 };
 </script>
 
@@ -368,7 +215,7 @@ html {
 INCLUDE STYLES AND COMPONENTS
 ===================== */
 /* ================== HELPERS  =================== */
-a:hover {
+/* a:hover {
   text-decoration: none;
 }
 
@@ -394,10 +241,10 @@ a:hover {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 2rem 2.3rem;
-}
+} */
 
 /* =================  DEFINED VARIABLES =================== */
-.icon-xs,
+/* .icon-xs,
 .icon-sm,
 .icon-md,
 .icon-lg {
@@ -513,36 +360,36 @@ a:hover {
 [class*="hover-"] {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
+} */
 
-.hover-bg:hover {
-  background: #3167eb;
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(
+/* .hover-bg:hover {
+  background: #3167eb; */
+/* For browsers that do not support gradients */
+/* For Safari 5.1 to 6.0 */
+/* For Opera 11.1 to 12.0 */
+/* For Firefox 3.6 to 15 */
+/* background: -webkit-gradient(
     linear,
     left top,
     right bottom,
     from(#3167eb),
     to(#3167eb)
   );
-  background: linear-gradient(to bottom right, #3167eb, #3167eb);
-  /* Standard syntax */
-  -webkit-transition: 0.5s;
+  background: linear-gradient(to bottom right, #3167eb, #3167eb); */
+/* Standard syntax */
+/* -webkit-transition: 0.5s;
   transition: 0.5s;
-}
+} */
 
-.hover-zoom:hover {
+/* .hover-zoom:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
-}
+} */
 
 /* ============== spacing ============== */
-.padding-y {
+/* .padding-y {
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -604,18 +451,18 @@ figure {
 }
 .form-noborder select.form-control-lg:not([size]):not([multiple]) {
   height: 2.875rem;
-}
+} */
 
 /* all clearfix */
-article:after,
+/* article:after,
 .form-group:after {
   display: block;
   clear: both;
   content: "";
-}
+} */
 
 /* -------------------- small grid gutter --------------------- */
-.row-sm {
+/* .row-sm {
   margin-right: -7px;
   margin-left: -7px;
   display: -ms-flexbox;
@@ -652,15 +499,15 @@ article:after,
 
 .bg-red {
   background-color: #fa3434;
-}
+} */
 
-.bg-gradient-blue {
-  background: rgba(33, 37, 41, 0.4);
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(
+/* .bg-gradient-blue {
+  background: rgba(33, 37, 41, 0.4); */
+/* For browsers that do not support gradients */
+/* For Safari 5.1 to 6.0 */
+/* For Opera 11.1 to 12.0 */
+/* For Firefox 3.6 to 15 */
+/* background: -webkit-gradient(
     linear,
     left top,
     right bottom,
@@ -671,19 +518,19 @@ article:after,
     to bottom right,
     rgba(49, 103, 235, 0.9),
     rgba(33, 37, 41, 0.4)
-  );
-  /* Standard syntax */
-  -webkit-transition: 0.5s;
+  ); */
+/* Standard syntax */
+/* -webkit-transition: 0.5s;
   transition: 0.5s;
-}
+} */
 
-.bg-gradient-green {
-  background: rgba(33, 37, 41, 0.4);
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(
+/* .bg-gradient-green {
+  background: rgba(33, 37, 41, 0.4); */
+/* For browsers that do not support gradients */
+/* For Safari 5.1 to 6.0 */
+/* For Opera 11.1 to 12.0 */
+/* For Firefox 3.6 to 15 */
+/* background: -webkit-gradient(
     linear,
     left top,
     right bottom,
@@ -694,19 +541,19 @@ article:after,
     to bottom right,
     rgba(0, 181, 23, 0.9),
     rgba(33, 37, 41, 0.4)
-  );
-  /* Standard syntax */
-  -webkit-transition: 0.5s;
+  ); */
+/* Standard syntax */
+/* -webkit-transition: 0.5s;
   transition: 0.5s;
-}
+} */
 
-.bg-gradient-orange {
-  background: rgba(33, 37, 41, 0.4);
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(
+/* .bg-gradient-orange {
+  background: rgba(33, 37, 41, 0.4); */
+/* For browsers that do not support gradients */
+/* For Safari 5.1 to 6.0 */
+/* For Opera 11.1 to 12.0 */
+/* For Firefox 3.6 to 15 */
+/* background: -webkit-gradient(
     linear,
     left top,
     right bottom,
@@ -717,19 +564,19 @@ article:after,
     to bottom right,
     rgba(255, 144, 23, 0.9),
     rgba(33, 37, 41, 0.4)
-  );
-  /* Standard syntax */
-  -webkit-transition: 0.5s;
+  ); */
+/* Standard syntax */
+/* -webkit-transition: 0.5s;
   transition: 0.5s;
-}
+} */
 
-.bg-gradient-red {
-  background: rgba(33, 37, 41, 0.4);
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(
+/* .bg-gradient-red {
+  background: rgba(33, 37, 41, 0.4); */
+/* For browsers that do not support gradients */
+/* For Safari 5.1 to 6.0 */
+/* For Opera 11.1 to 12.0 */
+/* For Firefox 3.6 to 15 */
+/* background: -webkit-gradient(
     linear,
     left top,
     right bottom,
@@ -740,19 +587,19 @@ article:after,
     to bottom right,
     rgba(250, 52, 52, 0.9),
     rgba(33, 37, 41, 0.4)
-  );
-  /* Standard syntax */
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
+  ); */
+/* Standard syntax */
+/* -webkit-transition: 0.5s;
+  transition: 0.5s; */
+/* } */
 
-.bg-gradient-pink {
-  background: rgba(33, 37, 41, 0.4);
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(
+/* .bg-gradient-pink {
+  background: rgba(33, 37, 41, 0.4); */
+/* For browsers that do not support gradients */
+/* For Safari 5.1 to 6.0 */
+/* For Opera 11.1 to 12.0 */
+/* For Firefox 3.6 to 15 */
+/* background: -webkit-gradient(
     linear,
     left top,
     right bottom,
@@ -763,13 +610,13 @@ article:after,
     to bottom right,
     rgba(232, 62, 140, 0.9),
     rgba(33, 37, 41, 0.4)
-  );
-  /* Standard syntax */
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
+  ); */
+/* Standard syntax */
+/* -webkit-transition: 0.5s;
+  transition: 0.5s; */
+/* } */
 
-.bg-pattern {
+/* .bg-pattern {
   background-image: url(), linear-gradient(135deg, #3167eb, #545454);
   background-size: cover, auto;
   background-repeat: no-repeat, repeat;
@@ -791,8 +638,8 @@ article:after,
 
 .overlay-gradient {
   position: relative;
-}
-.overlay-gradient:before {
+} */
+/* .overlay-gradient:before {
   position: absolute;
   content: "";
   display: block;
@@ -803,27 +650,27 @@ article:after,
   opacity: 0.6;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: aqua;
-  /* For browsers that do not support gradients */
-  /* For Safari 5.1 to 6.0 */
-  /* For Opera 11.1 to 12.0 */
-  /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(
+  background: aqua; */
+/* For browsers that do not support gradients */
+/* For Safari 5.1 to 6.0 */
+/* For Opera 11.1 to 12.0 */
+/* For Firefox 3.6 to 15 */
+/* background: -webkit-gradient(
     linear,
     left top,
     right bottom,
     from(#3167eb),
     to(aqua)
   );
-  background: linear-gradient(to bottom right, #3167eb, aqua);
-  /* Standard syntax */
-}
-.overlay-gradient:hover:before {
+  background: linear-gradient(to bottom right, #3167eb, aqua); */
+/* } */
+/* Standard syntax */
+/* .overlay-gradient:hover:before {
   opacity: 0.9;
-}
+} */
 
 /* --------------------- titles ---------------------- */
-.section-heading {
+/* .section-heading {
   margin-bottom: 20px;
   margin-top: 15px;
 }
@@ -861,20 +708,20 @@ article:after,
 
 p:last-child {
   margin-bottom: 0;
-}
+} */
 
 /* ==================  title helpers ================ */
-.rtl {
+/* .rtl {
   direction: rtl;
 }
 
 .ltr {
   direction: ltr;
-}
+} */
 
 /* ================== SECTIONS =================== */
 /* ================== header main ==================  */
-.header-top-light .nav-link {
+/* .header-top-light .nav-link {
   color: #969696;
 }
 .header-top-light .nav-link:hover {
@@ -885,7 +732,7 @@ p:last-child {
   position: relative;
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
+} */
 
 .brand-wrap .logo,
 .navbar-brand .logo {
@@ -902,7 +749,7 @@ p:last-child {
   color: #666;
 }
 
-.widget-header {
+/* .widget-header {
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -929,12 +776,12 @@ p:last-child {
 }
 .widget-header:hover i {
   color: #3167eb;
-}
+} */
 
 /* desktop only */
 /* desktop only .end */
 /* ================ SECTION-FOOTER ==================  */
-.section-footer ul li {
+/* .section-footer ul li {
   margin-bottom: 5px;
 }
 .section-footer ul a {
@@ -960,11 +807,11 @@ p:last-child {
 .footer-copyright {
   padding-top: 20px;
   padding-bottom: 20px;
-}
+} */
 
 /* ================== COMPONENTS =================== */
 /* ================ OWL SLIDER BANNER ================ */
-.slider-banner-owl .owl-nav .owl-prev,
+/* .slider-banner-owl .owl-nav .owl-prev,
 .slider-banner-owl .owl-nav .owl-next {
   padding: 16px 7px;
   color: #fff;
@@ -1131,10 +978,10 @@ a.itemside {
 
 .list-inline-item {
   vertical-align: middle;
-}
+} */
 
 /* --------- description list --------*/
-dl[class="row"] {
+/* dl[class="row"] {
   margin-bottom: 0;
 }
 
@@ -1164,17 +1011,17 @@ dl[class="row"] {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
+} */
 
 /* -------------------- list.row--------------------- */
-ul.row,
+/* ul.row,
 ul.row-sm {
   list-style: none;
   padding: 0;
-}
+} */
 
 /* ================= lists ================= */
-[class*="list-"] li:after {
+/* [class*="list-"] li:after {
   visibility: hidden;
   display: block;
   content: "";
@@ -1292,15 +1139,15 @@ ul.row-sm {
 .cols-four {
   -webkit-column-count: 4;
   column-count: 4;
-}
+} */
 
 /* IF CARD IS LINKED */
-a[class*="card"] {
+/* a[class*="card"] {
   color: initial;
 }
 a[class*="card"]:hover .title {
   color: #3167eb;
-}
+} */
 
 /* BASE STYLE FOR PRODUCT ITEM */
 [class*="card-product"] a.title {
@@ -1379,6 +1226,21 @@ a[class*="card"]:hover .title {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
 }
+
+.v-btn .btn-overlay {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .card-product-grid:hover .btn-overlay {
   opacity: 1;
 }
@@ -1394,7 +1256,7 @@ a[class*="card"]:hover .title {
 }
 
 /* LARGE LIST STYLE PRODUCT ITEM */
-.card-product-list {
+/* .card-product-list {
   margin-bottom: 20px;
 }
 .card-product-list .img-wrap {
@@ -1588,10 +1450,10 @@ a[class*="card"]:hover .title {
 }
 .filter-group:last-child {
   border-bottom: 0;
-}
+} */
 
 /* ====================== block ==================== */
-.box {
+/* .box {
   padding: 20px;
   background: #fff;
   border-radius: 0.37rem;
@@ -1599,14 +1461,14 @@ a[class*="card"]:hover .title {
 }
 .box img {
   max-width: 100%;
-}
+} */
 
 /* ================= RATINGS ============== */
-.label-rating {
+/* .label-rating {
   margin-left: 7px;
   display: inline-block;
   vertical-align: middle;
-}
+} */
 
 /* rating-list */
 .rating-stars {
@@ -1642,7 +1504,7 @@ a[class*="card"]:hover .title {
 }
 
 /* ================= TRACKING ============== */
-.tracking-wrap {
+/* .tracking-wrap {
   position: relative;
   background-color: #ddd;
   height: 7px;
@@ -1791,16 +1653,16 @@ a[class*="card"]:hover .title {
   border-color: #3167eb;
   background-color: #3167eb;
   color: #fff;
-}
+} */
 
 /* ================== PAGES =================== */
 /* ================ PAGES HEADER ================== */
-.section-pagetop {
+/* .section-pagetop {
   padding: 45px 0;
-}
+} */
 
 /* ================== PAGE DETAILS ==================  */
-.gallery-wrap .img-big-wrap {
+/* .gallery-wrap .img-big-wrap {
   margin-bottom: 10px;
   border-radius: 0.37rem;
   overflow: hidden;
@@ -1853,11 +1715,11 @@ a[class*="card"]:hover .title {
 }
 .item-option-select .btn {
   min-width: 80px;
-}
+} */
 
 /* ================ PAGES HEADER ================== */
 /* ====================== shopping-cart ==================== */
-.table-shopping-cart.table td,
+/* .table-shopping-cart.table td,
 .table-shopping-cart.table th {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1869,7 +1731,7 @@ a[class*="card"]:hover .title {
   font-weight: bold;
   margin-right: 5px;
   display: block;
-}
+} */
 
 /*# sourceMappingURL=ui.css.map */
 /* ul{
@@ -1880,4 +1742,9 @@ a[class*="card"]:hover .title {
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    list-style: none;
  } */
+
+figure.card {
+  width: 100%;
+  min-height: 100%;
+}
 </style>

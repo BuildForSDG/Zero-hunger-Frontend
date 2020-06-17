@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2020-6-10: Created with FontForge (http://fontforge.org)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<defs>
+<font id="Farmers_expand" horiz-adv-x="200" >
+  <font-face 
+    font-family="Farmers_expand"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 5 3 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="-0.000732422 9.41602 511.997 374.59"
+    underline-thickness="25.6"
+    underline-position="-51.2"
+    unicode-range="U+0020-F100"
+  />
+    <missing-glyph />
+    <glyph glyph-name="space" unicode=" " 
+ />
+    <glyph glyph-name="001-null" unicode="&#xf100;" horiz-adv-x="512" 
+d="M379.511 274.394c73.0537 0 132.486 -59.4355 132.486 -132.488c0 -73.0537 -59.4346 -132.489 -132.488 -132.489h-184.427c-12.3486 0 -22.3574 10.0088 -22.3574 22.3574s10.0088 22.3574 22.3574 22.3574h184.427c48.3984 0 87.7744 39.376 87.7744 87.7744
+s-39.376 87.7744 -87.7744 87.7744h-303.179l62.0283 -62.0293c8.73242 -8.73145 8.73242 -22.8857 0 -31.6182c-4.36621 -4.36426 -10.0879 -6.54785 -15.8086 -6.54785s-11.4424 2.18066 -15.8086 6.54785l-100.193 100.192c-8.73145 8.73242 -8.73145 22.8867 0 31.6182
+l100.193 100.198c8.7334 8.73145 22.8857 8.7334 31.6201 0c8.73145 -8.73242 8.73145 -22.8867 0 -31.6182l-62.0293 -62.0293h303.179z" />
+  </font>
+</defs></svg>

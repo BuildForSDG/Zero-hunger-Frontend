@@ -1,0 +1,171 @@
+.login-page,.register-page{
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: row-reverse;
+}
+
+
+.register-page .left-part,
+.login-page .left-part{
+  display: flex;
+justify-content: center;
+align-items: center;
+width: 40%;
+min-height: 100vh;
+}
+
+.register-page .left-part .container-fluid
+{ 
+width: 90%;
+}
+.login-page .left-part .container-fluid
+{ 
+width: 60%;
+}
+.register-page .left-part .brand-wrap,
+.login-page .left-part .brand-wrap
+{
+font-size: 1em;
+}
+
+.right-part
+{
+  width: 60%;
+}
+
+.slide-wrp,.slide,.slide-item{
+height: 100%;
+}
+
+.slide{
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+flex-direction: column;
+flex:1 1 100%;
+position: relative;
+}
+.slide-item{
+  position: absolute;
+  width: 100%;
+  transition: margin .5s ease;
+  margin-left: 1000%;
+}
+.slide-item.next{
+  margin-left: 100%;
+  z-index: 1;
+}
+.slide-item.active{
+  margin-left: 0;
+  z-index: 2;
+}
+.slide-item.active .fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+.slide-item.prev{
+  margin-left: -100%;
+  z-index: 1;
+}
+.slide-bg-farmer{
+  position: relative;
+  height: 100%;
+  background-image: url(../img/misc/farmer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.slide-bg-warehouse{
+  position: relative;
+  height: 100%;
+  background-image: url(../img/misc/warehouse.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.slide-overlay::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background:darkmagenta;
+  background-image: linear-gradient(259deg, #6e1cff 0%,green 100% );
+opacity: .5;
+}
+.slide-content{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+flex: 0 0 auto;
+align-items: center;
+/* justify-content: center; */
+}
+.slide-content .slide-content-text{
+width: 100%;
+margin:0 25px;
+}
+
+.slide-content-text .brand-wrap{
+font-size: 1.5em;
+}
+
+
+.show-password .input-group-text{
+  background-color: white !important;
+  cursor: pointer;
+}
+
+.show-password.active .input-group-text{
+  color: #6e1cff !important;
+}
+
+.slide-content-text .value-proposed{
+color: white;
+font-weight: bold;
+}
+@media (max-width: 1200px) {
+  /* tablet devices */ 
+  .login-page .left-part .container-fluid
+   {
+    width: 90%;
+  }
+
+  .register-page .left-part .container-fluid
+{ 
+width: 100%;
+}
+}
+@media (max-width: 1200px) and (hover: none) {
+  /* tablet devices */ 
+  
+
+}
+@media (max-width: 992px) {
+  /* small tablet devices */
+
+  .login-page .left-part .container-fluid
+  {
+    width: 90% !important;
+}
+  
+  }
+
+@media all and (max-width: 768px) {
+  /* mobile devices */
+
+  .register-page .left-part,.register-page .left-part .container-fluid,
+  .login-page .left-part,.login-page .left-part .container-fluid
+  {
+  width: 100%;
+  }
+  .right-part
+  {
+    display: none;
+  }
+}

@@ -1,0 +1,22 @@
+.alternative-login .divider-line{
+  height: 0;
+border-bottom: 2px solid;
+width: 30%;
+margin: 20px auto;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.alternative-login .divider-line span{
+  margin-bottom: -2px;
+background: #fff9f9;
+padding: 0 5px;
+}
+
+.reg-fogotten{
+  padding: 0 10px;
+  margin-top: 10px;
+  text-align: center;
+}

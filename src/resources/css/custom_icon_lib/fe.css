@@ -1,0 +1,28 @@
+
+@font-face {
+  font-family: "Farmers_expand";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Farmers_expand";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="Fe-"]:before, [class*=" Fe-"]:before,
+[class^="Fe-"]:after, [class*=" Fe-"]:after {   
+  font-family: Farmers_expand;
+        font-size: 20px;
+font-style: normal;
+}
+
+.Fe-return:before { content: "\f100"; }

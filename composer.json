@@ -1,9 +1,5 @@
 {
   "name": "team237/farmers-expand",
   "description": "Farmer's Expand is the #1 platform where buyers meet sellers of perishable goods farm produce",
-  "require-dev": {
-    "phpunit/phpunit": "^9.1",
-    "friendsofphp/php-cs-fixer": "^2.0"
-  },
   "require": {}
 }

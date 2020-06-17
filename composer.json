@@ -5,21 +5,5 @@
     "phpunit/phpunit": "^9.1",
     "friendsofphp/php-cs-fixer": "^2.0"
   },
-  "require": {},
-  "scripts": {
-    "test": "phpunit",
-    "php-cs-fixer": "php-cs-fixer fix ./"
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "src"
-    }
-    ,
-    "classmap": ["src/"]
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "App\\": "tests"
-    }
-  }
+  "require": {}
 }

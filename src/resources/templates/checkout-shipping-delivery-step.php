@@ -34,7 +34,7 @@
 	<div class="form-row">
   <div class="form-group col-md-6">
 		  <label>Shipping Agent</label>
-		  <select id="inputState" class="form-control">
+		  <select id="inputState" class="form-control custom-select">
 		    <option> Choose...</option>
 		      <option>UPS green</option>
 		      <option>Ade n Shade Pick n Drop</option>
@@ -44,7 +44,7 @@
     
     <div class="form-group col-md-6">
 		  <label>Method</label>
-		  <select id="ship-method" class="form-control">
+		  <select id="ship-method" class="form-control custom-select">
 		    <option>Delivery</option>
 		      <option>Pick Up</option>
 		  </select>

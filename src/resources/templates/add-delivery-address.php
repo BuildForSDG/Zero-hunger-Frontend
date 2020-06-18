@@ -16,7 +16,7 @@
 	<div class="form-row">
   <div class="form-group col-md-6">
 		  <label>Country</label>
-		  <select id="inputState" class="form-control">
+		  <select id="inputState" class="form-control custom-select">
 		    <option> Choose...</option>
 		      <option>Senegal</option>
 		      <option>Cameroon</option>
@@ -27,7 +27,7 @@
     
     <div class="form-group col-md-6">
 		  <label>State/Region/Province</label>
-		  <select id="inputState" class="form-control">
+		  <select id="inputState" class="form-control custom-select">
 		    <option> Choose...</option>
 		      <option>Osun</option>
 		      <option>Lagos</option>

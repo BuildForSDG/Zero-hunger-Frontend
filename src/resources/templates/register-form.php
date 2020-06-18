@@ -21,7 +21,7 @@
 		</div> <!-- form-group end.// -->
 		<div class="form-group col-md-6">
 		  <label>Country</label>
-		  <select id="inputState" class="form-control">
+		  <select id="inputState" class="form-control custom-select">
 		    <option> Choose...</option>
 		      <option>Senegal</option>
 		      <option>Cameroon</option>

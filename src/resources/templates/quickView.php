@@ -6,7 +6,7 @@
 			<div class="col-12">
 			<div class="return-close-btn">
 				<span id="close-quick-view" class="Fe Fe-return" onclick="closeQuickView()"></span>
-				<a href="#" class="to-product-page">Goto Product Page <span class="fa fa-arrow-right"></span></a>
+				<a href="./product.php" class="to-product-page">Goto Product Page <span class="fa fa-arrow-right"></span></a>
 			</div>
 			</div>
 			<div class="col-12">

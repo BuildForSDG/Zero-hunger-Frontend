@@ -97,7 +97,5 @@ function changeQuantity(chng_btn){
       quantity.val(Oldval+1)
       updateQuantity(quantity)
     }
-
-
   
 }

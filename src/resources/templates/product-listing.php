@@ -3,7 +3,8 @@
 <!-- ============================ COMPONENTS 1  ================================= -->
 <div class="row">
 	<div class="col-md-4 col-lg-3">
-		<figure class="card card-product-grid">
+	<a href="./product.php">
+	<figure class="card card-product-grid">
 			<div class="img-wrap"> 
 			<span class="topbar">
 					<span class="badge badge-success"> Fresh </span>
@@ -18,7 +19,8 @@
 				<a href="#" class="title">Tomatoes</a>
 				<div class="price mt-2">$30.00</div> <!-- price-wrap.// -->
 			</figcaption>
-		</figure> <!-- card // -->
+		</figure>
+</a> <!-- card // -->
 	</div> <!-- col.// -->
 
 	<div class="col-md-4 col-lg-3">
@@ -84,6 +86,7 @@
  <!-- ============================ COMPONENTS 2  ================================= -->
 
  <div class="col-md-4 col-lg-3">
+		<a href="./product.php">
 		<figure class="card card-product-grid">
 			<div class="img-wrap"> 
 			<span class="topbar">
@@ -91,7 +94,7 @@
 				</span>
 				<img src="./resources/img/banners/mandarin%20oranges.jpg">
 				<span class="topbar">
-					<a href="#" class="float-right"><i class="fa fa-heart"></i></a>
+					<a href="/product.php" class="float-right"><i class="fa fa-heart"></i></a>
 				</span>
 				<a class="btn-overlay" href="#" onclick="quickView()"><i class="fa fa-search-plus"></i> Quick view</a>
 			</div>
@@ -100,6 +103,7 @@
 				<div class="price mt-2">$6.00</div> <!-- price-wrap.// -->
 			</figcaption>
 		</figure> <!-- card // -->
+	</a>
 	</div> <!-- col.// -->
 
 	<div class="col-md-4 col-lg-3">

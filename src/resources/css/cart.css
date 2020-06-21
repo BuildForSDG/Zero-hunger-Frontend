@@ -24,10 +24,10 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   float: left;
   width: 18%;
 }
-.product-quantity input {
+/* .product-quantity input {
   -moz-appearance: textfield;
   text-align: center;
-}
+} */
 
 .product-removal {
   float: left;

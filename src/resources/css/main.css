@@ -1,6 +1,10 @@
 a{
   text-decoration: none;
 }
+input[type="number"]{
+  -moz-appearance: textfield;
+  text-align: center;
+}
 .accessibility-support .navbar-nav,.sorting .navbar-nav {
   flex-direction: row;
 justify-content: end;
@@ -74,5 +78,13 @@ select{
   .footer-copyright p{
     float: none !important;
     text-align: center;
+  }
+
+  .icontext{
+    padding-bottom: 15px;
+  }
+
+  .brand-wrap{
+    
   }
 }

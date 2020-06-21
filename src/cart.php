@@ -20,7 +20,7 @@
 			</div>
         </nav>
         <div class="container-fluid">
-            <div class="row py-2 px-5 mx-5">
+            <div class="row py-2">
             <div class="col">
                   <p class="alert alert-info text-center">
                       Your are about to Check out, Please review the product(s) in your cart before checking out.

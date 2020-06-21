@@ -29,6 +29,18 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   text-align: center;
 } */
 
+.control {
+  color: #9575cd !important;
+  background-color: white;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.control:hover{
+  background-color: #9575cd;
+  color: white !important;
+}
+
 .product-removal {
   float: left;
   width: 8%;
